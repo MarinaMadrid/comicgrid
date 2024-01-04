@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+
+*,/*todos los elementos*/
+  *::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+  *::after {
+    box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+    margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+    padding: 0;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Solo colores*/
+header, button, nav{
+    background-color:rgb(0,131,140);
+    border: 1px solid rgb(0,131,140);
+}
+
+header h6{
+    color: rgb(150, 205, 207);
+}
+
+.portfolio p{
+    color: rgb(127, 129, 131);
+}
+
+.welcome, .get-in-touch i {
+    background-color: rgb(36,36,36);
+}
+
+h1, h2, nav a, span, .get-in-touch i{
+    color: white;
+}
+
+.welcome h6, .welcome p, .subtitle-portfolio, figcaption{
+    color: rgb(96, 95, 88);
+}
+
+.get-in-touch{
+    background-color: rgb(147,158,119);
+}
+
+/*Tamaño de letra*/
+header h1, .title-portfolio, .welcome h2, .get-in-touch h2{
+    font-size: xx-large;
+}
+
+.welcome h6{
+    font-size:large;
+}
+
+.subtitle-portfolio{
+    font-size: medium;
+}
+
+/*--------------------------------------*/
+
+/*HEADER*/
+header {
+    height: 20em;
+}
+
+header, .welcome, .get-in-touch, footer{
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h6, footer{
+    text-align: center;
+}
+
+/*NAV*/
+nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/*PORTFOLIO*/
+.main-portfolio{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 1em;
+    margin-top: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
+    height: auto;
+}
+
+.title-portfolio {
+    color: rgb(36,36,36);
+    margin-top: 2em;
+}
+
+.subtitle-portfolio {
+    letter-spacing: 2px;
+}
+
+img {
+    grid-area: img;
+    width: 17em;
+    height: 11em;
+    margin-right: 1em;
+}
+
+figcaption{
+    grid-area: fig;
+    font-weight: bolder;
+    padding: 1.5em;
+    margin-top: 1em;
+    margin-left: 2.5em;
+}
+
+.main-portfolio p{
+    grid-area: p;
+    line-height: 2em;
+    margin-bottom: 3em;
+    margin-right: 1em;
+}
+
+button{
+    grid-area: boton;
+    letter-spacing: 5px;
+    width: 15em;
+    padding: 1.5em;
+    color: rgb(124, 208, 212);
+}
+
+.portfolio button{
+    color:white;
+    margin-left: 1.5em;
+}
+
+/*WELCOME Y TOUCH*/
+.welcome, .get-in-touch{
+    height: 30em;
+}
+
+.welcome p {
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+.get-in-touch p {
+    color: rgb(189, 196, 172);
+    margin-top: 0.5em;
+    margin-bottom: 5em;
+    text-transform: uppercase;
+}
+
+.get-in-touch i{
+    /*Poner mismo tamaño*/
+    font-size: 1em;
+    padding: 1em;
+}
+
+.welcome p, .get-in-touch p{
+    margin-left: 10em;
+    margin-right: 10em;
+    text-align-last: center;
+}
+
+/*FOOTER*/
+footer{
+    color: rgb(255, 118, 66);
+    background-color: rgb(255,69,0);
+    height: 20em;
+}
+
+footer span {
+    color: rgb(255, 160, 112);
+}
